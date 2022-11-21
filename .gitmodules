@@ -1,0 +1,15 @@
+[submodule "ext/miniunit"]
+	path = ext/miniunit
+	url = https://github.com/urin/miniunit.git
+[submodule "ext/cgreen"]
+	path = ext/cgreen
+	url = https://github.com/cgreen-devs/cgreen.git
+[submodule "ext/FakeIt"]
+	path = ext/FakeIt
+	url = https://github.com/eranpeer/FakeIt.git
+[submodule "ext/acutest"]
+	path = ext/acutest
+	url = https://github.com/mity/acutest.git
+[submodule "ext/Catch2"]
+	path = ext/Catch2
+	url = https://github.com/catchorg/Catch2.git
