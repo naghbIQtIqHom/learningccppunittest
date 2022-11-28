@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 
 project(fizzbuzz)
-# OPTION(BUILD_TESTO "test for replacing printf" OFF) 
+OPTION(BUILD_TEST "test for replacing printf" OFF) 
 if(BUILD_TEST)
   add_compile_definitions(BUILD_TEST)
 endif(BUILD_TEST)
