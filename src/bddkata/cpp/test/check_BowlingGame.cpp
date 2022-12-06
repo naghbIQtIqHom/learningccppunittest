@@ -1,7 +1,6 @@
 #include "../src/BowlingGame.hpp"
 
 #include <cgreen/cgreen.h>
-#include <cgreen/mocks.h>
 
 using namespace cgreen;
 
@@ -11,4 +10,8 @@ AfterEach( BowlingGame ) {}
 
 Ensure( BowlingGame, GutterGame ) {
     Game g;
+    for (int i = 0; i < 20; i++)
+    {
+        g.roll(0);
+    }
 }
