@@ -43,9 +43,14 @@ Ensure( BowlingGame, OneSpare ) {
     assert_that(g.score(), is_equal_to(16));
 }
 
+void rollStrike(Game& g)
+{
+    g.roll(10);
+}
+
 Ensure( BowlingGame, OneStrike ) {
     Game g;
-    g.roll(10); // strike
+    rollStrike(g);
     g.roll(3);
     g.roll(4);
     rollMany(g, 16, 0);
