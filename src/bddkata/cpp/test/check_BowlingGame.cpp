@@ -19,9 +19,7 @@ void rollMany(Game& g, int n, int pins)
 
 Ensure( BowlingGame, GutterGame ) {
     Game g;
-    int n = 20;
-    int pins = 0;
-    rollMany(g, n, pins);
+    rollMany(g, 20, 0);
     assert_that(g.score(), is_equal_to(0));
 }
 
