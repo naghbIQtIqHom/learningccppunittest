@@ -8,14 +8,20 @@ Describe( BowlingGame );
 BeforeEach( BowlingGame ) {}
 AfterEach( BowlingGame ) {}
 
-Ensure( BowlingGame, GutterGame ) {
-    Game g;
-    int n = 20;
-    int pins = 0;
+
+void rollMany(int n, int pins)
+{
     for (int i = 0; i < n; i++)
     {
         g.roll(pins);
     }
+}
+
+Ensure( BowlingGame, GutterGame ) {
+    Game g;
+    int n = 20;
+    int pins = 0;
+    rollMany(n, pins);
     assert_that(g.score(), is_equal_to(0));
 }
 
