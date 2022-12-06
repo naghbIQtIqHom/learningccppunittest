@@ -29,10 +29,15 @@ Ensure( BowlingGame, AllOnes ) {
     assert_that(g.score(), is_equal_to(20));
 }
 
+void rollSpare(Game& g)
+{
+    g.roll(5);
+    g.roll(5);
+}
+
 Ensure( BowlingGame, OneSpare ) {
     Game g;
-    g.roll(5);
-    g.roll(5); // spare
+    rollSpare(g);
     g.roll(3);
     rollMany(g, 17, 0);
     assert_that(g.score(), is_equal_to(16));
