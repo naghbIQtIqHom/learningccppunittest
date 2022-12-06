@@ -11,7 +11,7 @@ int Game::score(void)
     int frameIndex = 0;
     for (int frame = 0; frame < 10; frame++)
     {
-        if (_rolls[frameIndex] == 10) // strike
+        if (isStrike(frameIndex))
         {
             score += 10 + strikeBonus(frameIndex);
             frameIndex++;
@@ -41,6 +41,11 @@ int Game::spareBonus(int frameIndex)
 int Game::strikeBonus(int frameIndex)
 {
     return _rolls[frameIndex + 1] + _rolls[frameIndex + 2];
+}
+
+bool Game::isStrike(int frameIndex)
+{
+    return _rolls[frameIndex] == 10;
 }
 
 bool Game::isSpare(int frameIndex)
