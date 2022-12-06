@@ -13,19 +13,34 @@ int Game::score(void)
     {
         if (_rolls[frameIndex] == 10) // strike
         {
-            score += 10 + _rolls[frameIndex + 1] + _rolls[frameIndex + 2];
+            score += 10 + strikeBonus(frameIndex);
             frameIndex++;
         } 
         else if (isSpare(frameIndex))
         {
-            score += 10 + _rolls[frameIndex + 2];
+            score += 10 + spareBonus(frameIndex);
             frameIndex += 2;
         } else {
-            score += _rolls[frameIndex] + _rolls[frameIndex + 1];
+            score += sumOfBallsInFrame(frameIndex);
             frameIndex += 2;
         }
     }
     return score;
+}
+
+int Game::sumOfBallsInFrame(int frameIndex) 
+{
+    return _rolls[frameIndex] + _rolls[frameIndex + 1];
+}
+
+int Game::spareBonus(int frameIndex)
+{
+    return _rolls[frameIndex + 2];
+}
+
+int Game::strikeBonus(int frameIndex)
+{
+    return _rolls[frameIndex + 1] + _rolls[frameIndex + 2];
 }
 
 bool Game::isSpare(int frameIndex)
