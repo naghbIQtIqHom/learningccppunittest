@@ -9,9 +9,9 @@ void Game::roll(int pins)
 int Game::score(void)
 {
     int s = 0;
-    for (int i = 0; i < sizeof(_rolls/_rolls[0]); i++)
+    for (int i = 0; i < sizeof(_rolls)/sizeof(*_rolls); i++)
     {
-        s += rolls[i];
+        s += _rolls[i];
     }
     return s;
 }
