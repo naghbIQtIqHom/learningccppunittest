@@ -8,5 +8,10 @@ void Game::roll(int pins)
 
 int Game::score(void)
 {
-    return _score;
+    int s = 0;
+    for (int i = 0; i < sizeof(_rolls/_rolls[0]); i++)
+    {
+        s += rolls[i];
+    }
+    return s;
 }
