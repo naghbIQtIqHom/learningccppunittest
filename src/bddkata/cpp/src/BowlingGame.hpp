@@ -6,6 +6,7 @@ class Game
 private:
     int _rolls[21];
     int _currentRoll;
+    bool isSpare(int frameIndex);
 public:
     Game() : _rolls {0}, _currentRoll{0} {}
     Game(const Game&)  = delete;
