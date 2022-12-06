@@ -9,7 +9,7 @@ BeforeEach( BowlingGame ) {}
 AfterEach( BowlingGame ) {}
 
 
-void rollMany(int n, int pins)
+void rollMany(Game& g, int n, int pins)
 {
     for (int i = 0; i < n; i++)
     {
@@ -21,7 +21,7 @@ Ensure( BowlingGame, GutterGame ) {
     Game g;
     int n = 20;
     int pins = 0;
-    rollMany(n, pins);
+    rollMany(g, n, pins);
     assert_that(g.score(), is_equal_to(0));
 }
 
