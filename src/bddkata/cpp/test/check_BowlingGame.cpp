@@ -25,9 +25,6 @@ Ensure( BowlingGame, GutterGame ) {
 
 Ensure( BowlingGame, AllOnes ) {
     Game g;
-    for (int i = 0; i < 20; i++)
-    {
-        g.roll(1);
-    }
+    rollMany(g, 20, 1);
     assert_that(g.score(), is_equal_to(20));
 }
