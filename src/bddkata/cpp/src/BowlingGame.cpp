@@ -4,7 +4,7 @@ void Game::roll(int pints)
 {
 }
 
-int Game::score()
+int Game::score(void)
 {
-    return -1;
+    return 0;
 }

@@ -13,6 +13,6 @@ Ensure( BowlingGame, GutterGame ) {
     for (int i = 0; i < 20; i++)
     {
         g.roll(0);
-        assert_that(g.score(), is_equal_to(0));
     }
+    assert_that(g.score(), is_equal_to(0));
 }
