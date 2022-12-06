@@ -3,7 +3,10 @@
 
 class Game 
 {
+private:
+    int _score;
 public:
-    void roll(int pints);
+    Game() : _score {0} {}
+    void roll(int pins);
     int score(void);
 };
