@@ -10,9 +10,11 @@ AfterEach( BowlingGame ) {}
 
 Ensure( BowlingGame, GutterGame ) {
     Game g;
-    for (int i = 0; i < 20; i++)
+    int n = 20;
+    int pins = 0;
+    for (int i = 0; i < n; i++)
     {
-        g.roll(0);
+        g.roll(pins);
     }
     assert_that(g.score(), is_equal_to(0));
 }
