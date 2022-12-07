@@ -8,6 +8,6 @@ Describe( LifeGame );
 BeforeEach( LifeGame ) {}
 AfterEach( LifeGame ) {}
 
-Ensure( LifeGame, GutterGame ) {
+Ensure( LifeGame, dummy ) {
     assert_that(1, is_equal_to(0));
 }
