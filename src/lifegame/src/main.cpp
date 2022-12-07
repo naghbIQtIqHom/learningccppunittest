@@ -17,11 +17,11 @@ void display(size_t width, size_t height, std::vector<bool> grid)
 
 int main(void)
 {
-    Game g(78, 20); // x, y のセルの広さを定義する
+    LifeGame g(79, 24); // x, y のセルの広さを定義する
     g.init(); // x,y にランダムにセルをばらまく
     for(int generation = 0; generation < 10; generation++) {
         std::vector<bool> grid = g.next_generation(); // 配列に次世代セルを書き込む
-        display(78, 20, grid);
+        display(79, 24, grid);
         std::this_thread::sleep_for(std::chrono::milliseconds(100));
     }
     return 0;
