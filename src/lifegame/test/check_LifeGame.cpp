@@ -8,6 +8,8 @@ Describe( LifeGame );
 BeforeEach( LifeGame ) {}
 AfterEach( LifeGame ) {}
 
-Ensure( LifeGame, dummy ) {
-    assert_that(1, is_equal_to(0));
+Ensure( LifeGame, current_returns_grid ) {
+    LifeGame g(1, 1);
+    std::vector<bool> grid = g.current();
 }
+
