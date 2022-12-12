@@ -3,7 +3,7 @@ add_library(LifeGame SHARED
 set_target_properties(LifeGame PROPERTIES
   CXX_STANDARD 17
   CXX_EXTENSIONS OFF
-  COMPILE_FLAGS -fPIC
+  COMPILE_FLAGS "-fPIC -fpermissive" #-fpermissive
 )
 
 add_executable(run_LifeGame
